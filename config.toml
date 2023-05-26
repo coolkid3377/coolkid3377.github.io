@@ -19,6 +19,7 @@ Paginate = 9
     show_reading_time = true
     recent_posts_number = 10 
     custom_css = [ "custom.css" ]
+    env = "production"
 
 [[params.ananke_socials]]
     name = "twitter"
