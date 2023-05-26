@@ -1,4 +1,49 @@
-baseURL = 'http://coolkid3377.github.io/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'ananke'
+baseURL = "http://coolkid3377.github.io/"
+languageCode = "en-us"
+title = "CoolKid"
+theme = "ananke"
+
+sectionPagesMenu = "main"
+Paginate = 9
+
+#These not working with Paginate
+#[[menu.main]]
+#    name = "About"
+#    url = "/about/"
+
+#[[menu.main]]
+#    name = "Articles"
+#    url = "/posts/"
+
+[params]
+    show_reading_time = true
+    recent_posts_number = 10 
+    custom_css = [ "custom.css" ]
+
+[[params.ananke_socials]]
+    name = "twitter"
+    url = "https://twitter.com/RayKwok9" 
+
+[[params.ananke_socials]]    
+    name = "medium"
+    url = "https://medium.com/@raygcornfield"
+
+#[[params.ananke_socials]]
+#    name = "rss"
+#    url = ""
+
+[[params.ananke_socials]]
+    name = "facebook"
+    follow = false
+
+[[params.ananke_socials]]
+    name = "linkedin"
+    follow = false
+    
+googleAnalytics = "G-TZ9PHKZ4YL"
+enableRobotsTXT = true
+
+[sitemap]
+    changefreq = "daily"
+    priority = 0.5
+    filename = "sitemap.xml"
