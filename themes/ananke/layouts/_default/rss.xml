@@ -26,6 +26,7 @@
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
     {{ range $pages }}
+    {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
@@ -33,9 +34,8 @@
       {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>
-      {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
       <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}">
-      {{ .Summary | html }}
+      <div>{{ .Summary | html }}</div>
       </description>
     </item>
     {{ end }}
